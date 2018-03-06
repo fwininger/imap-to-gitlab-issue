@@ -1,4 +1,4 @@
-$LOAD_PATH.push File.expand_path('../lib', __FILE__)
+$LOAD_PATH.push File.expand_path('lib', __dir__)
 
 # Maintain your gem's version:
 require 'imap_to_gitlab_issue/version'
@@ -18,8 +18,8 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map { |f| File.basename(f) }
   s.require_paths = ['lib']
 
-  s.add_dependency 'rails', '>= 4.2'
   s.add_dependency 'breadcrumbs_on_rails'
+  s.add_dependency 'rails', '>= 4.2'
 
   s.add_development_dependency 'rubocop'
 end
